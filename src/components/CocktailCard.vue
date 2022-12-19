@@ -1,4 +1,5 @@
 <script>
+import StyledButton from "./StyledButton.vue";
 export default {
   name: "CocktailCard",
   props: {
@@ -7,13 +8,16 @@ export default {
       required: true,
     },
   },
+  components: {
+    StyledButton,
+  },
   data() {
     return {
       showFullDescription: false,
     };
   },
   methods: {
-    showDescription(description, fullDescription = false, wordCount = 25) {
+    showDescription(description, fullDescription = false, wordCount = 10) {
       if (fullDescription) return description;
       const descriptionSplitted = description.split(" ");
       if (descriptionSplitted.length <= wordCount) return description;
@@ -33,6 +37,7 @@ export default {
     <p @click="showFullDescription = !showFullDescription">
       {{ showDescription(cocktail.instructions, showFullDescription) }}
     </p>
+    <StyledButton class="button">Make It Yourself</StyledButton>
     <div class="thumbnail-container">
       <img
         :src="cocktail.imageUrl"
@@ -56,9 +61,9 @@ export default {
   transition: transform 0.4s ease-in-out;
 }
 
-.cocktail-card:hover {
+/* .cocktail-card:hover {
   transform: translateY(-16px);
-}
+} */
 
 .cocktail-card .logo {
   position: absolute;
@@ -107,6 +112,10 @@ export default {
   font-weight: 300;
   font-size: 0.85em;
   cursor: pointer;
+}
+
+.cocktail-card .button {
+  margin-bottom: 24px;
 }
 
 .thumbnail-container {
