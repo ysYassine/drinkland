@@ -1,9 +1,11 @@
 <script setup>
 import LandingSection from "./components/LandingSection.vue";
+import CocktailsList from "./components/CocktailsList.vue";
 </script>
 
 <template>
   <LandingSection />
+  <CocktailsList />
 </template>
 
 <style>
@@ -25,7 +27,8 @@ import LandingSection from "./components/LandingSection.vue";
 }
 
 body {
-  color: white;
+  color: #d6cfd0;
+  font-family: "Unbounded", cursive;
 }
 
 img,
