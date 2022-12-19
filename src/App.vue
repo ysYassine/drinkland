@@ -41,7 +41,7 @@ video {
 
 @media (max-width: 840px) {
   * {
-    font-size: 13px;
+    font-size: 15px;
   }
 }
 </style>

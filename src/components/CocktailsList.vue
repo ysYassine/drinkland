@@ -56,7 +56,7 @@ export default {
 </script>
 
 <template>
-  <section class="cocktails-section">
+  <section class="cocktails-section" id="suggestion">
     <CocktailCard
       v-for="cocktail in cocktails"
       :cocktail="cocktail"
@@ -76,12 +76,5 @@ export default {
   align-items: stretch;
   gap: 2.5em;
   row-gap: 60px;
-}
-
-@media (max-width: 1110px) {
-  /* .cocktails-section {
-    padding: 5% 5%;
-    gap: 2em;
-  } */
 }
 </style>

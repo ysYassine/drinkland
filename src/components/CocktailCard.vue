@@ -61,10 +61,6 @@ export default {
   transition: transform 0.4s ease-in-out;
 }
 
-/* .cocktail-card:hover {
-  transform: translateY(-16px);
-} */
-
 .cocktail-card .logo {
   position: absolute;
   width: 80px;

@@ -1,6 +1,10 @@
 <script>
+import StyledButton from "./StyledButton.vue";
 export default {
   name: "LandingSection",
+  components: {
+    StyledButton,
+  },
 };
 </script>
 
@@ -15,6 +19,9 @@ export default {
         <h2>Mix it up with us !</h2>
       </div>
     </div>
+    <StyledButton class="explore-button" href="#suggestion"
+      >Explore our Suggestions</StyledButton
+    >
     <div class="description">
       <h2>THE SMALLEST YET THE BEST COCKTAIL HUB!</h2>
       <p>
@@ -94,7 +101,7 @@ export default {
   letter-spacing: 5px;
   font-size: 5em;
   font-family: "Wire One", sans-serif;
-  color: #601733;
+  color: #721a3c;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f1024d,
     0 0 82px #f1024d, 0 0 92px #f1024d, 0 0 102px #f1024d, 0 0 151px #f1024d;
 }
@@ -103,7 +110,12 @@ export default {
   margin: 0;
   padding: 0;
   font-size: 1.5em;
+  color: #d6cfd0;
   font-family: "Unbounded", cursive;
+}
+
+.explore-button {
+  font-size: 1.1em;
 }
 
 .description {
