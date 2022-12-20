@@ -29,6 +29,11 @@ a {
   overflow: hidden;
   transition: 0.2s;
   width: fit-content;
+  text-align: center;
+  z-index: 30;
+  border: 2px solid transparent;
+  animation: border-color-animation 2s linear infinite;
+  transition: all 0.4s ease-in-out;
 }
 
 a:hover {
@@ -36,6 +41,7 @@ a:hover {
   background: #eebbb7;
   box-shadow: 0 0 5px #eebbb7, 0 0 10px #eebbb7, 0 0 20px #eebbb7;
   transition-delay: 1s;
+  animation: none;
 }
 
 a span {
@@ -96,5 +102,26 @@ a:hover span:nth-child(4) {
   bottom: 100%;
   transition: 1s;
   transition-delay: 0.75s;
+}
+
+@keyframes border-color-animation {
+  0% {
+    border-top-color: #eaafd4;
+    border-right-color: #735250;
+    border-bottom-color: #eaafd4;
+    border-left-color: #735250;
+  }
+  50% {
+    border-top-color: #714846;
+    border-right-color: #eaafd4;
+    border-bottom-color: #735250;
+    border-left-color: #eaafd4;
+  }
+  100% {
+    border-top-color: #eaafd4;
+    border-right-color: #735250;
+    border-bottom-color: #eaafd4;
+    border-left-color: #735250;
+  }
 }
 </style>
