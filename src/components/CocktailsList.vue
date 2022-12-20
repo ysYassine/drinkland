@@ -64,7 +64,7 @@ export default {
         (a, b) => b.instructions.length - a.instructions.length
       );
       // Just for better UI reasons:
-      array.sort(function (a, b) {
+      this.cocktails.sort(function (a, b) {
         return b.instructions.length - a.instructions.length;
       });
     },

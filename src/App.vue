@@ -28,6 +28,18 @@ import CocktailsList from "./components/CocktailsList.vue";
 
 body {
   color: #d6cfd0;
+  background: linear-gradient(to right, black, #481428);
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 img,
