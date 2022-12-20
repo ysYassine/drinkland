@@ -37,8 +37,10 @@ export default {
 </script>
 
 <template>
-  <div class="cocktail-card">
+  <transition name="fade">
     <Modal v-if="showModal" @close="closeModal" :cocktail="cocktail" />
+  </transition>
+  <div class="cocktail-card">
     <div class="logo">
       <img src="../assets/Logo.png" alt="logo" />
     </div>
@@ -61,6 +63,14 @@ export default {
 </template>
 
 <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
 .cocktail-card {
   position: relative;
   border: 0.1em solid #fff;
