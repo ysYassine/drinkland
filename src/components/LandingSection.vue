@@ -48,6 +48,16 @@ export default {
   background-image: url("../assets/background.png");
   background-size: cover;
   padding: 0 70px 80px;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .neon-border {
