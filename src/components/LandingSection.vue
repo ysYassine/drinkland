@@ -70,7 +70,7 @@ export default {
 }
 
 .ticket {
-  z-index: 999;
+  z-index: 30;
   height: fit-content;
   width: fit-content;
   background: rgb(0, 0, 0);
@@ -110,6 +110,7 @@ export default {
   margin: 0;
   padding: 0;
   font-size: 1.5em;
+  text-align: center;
   color: #d6cfd0;
   font-family: "Unbounded", cursive;
 }
@@ -148,7 +149,7 @@ export default {
   }
 
   .glass {
-    opacity: 0.5;
+    display: none;
   }
 
   .ticket {
