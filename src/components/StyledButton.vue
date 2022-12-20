@@ -14,7 +14,7 @@ export default {
   </a>
 </template>
 
-<style>
+<style scoped>
 a {
   font-family: "Unbounded", cursive;
   position: relative;
