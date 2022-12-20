@@ -20,7 +20,7 @@ import CocktailsList from "./components/CocktailsList.vue";
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Unbounded", cursive;
   text-decoration: none;
   list-style: none;
   scroll-behavior: smooth;
@@ -28,7 +28,6 @@ import CocktailsList from "./components/CocktailsList.vue";
 
 body {
   color: #d6cfd0;
-  font-family: "Unbounded", cursive;
 }
 
 img,
@@ -37,6 +36,20 @@ svg,
 video {
   display: block;
   max-width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: #601733;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ad295b;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c58fb1;
 }
 
 @media (max-width: 840px) {
