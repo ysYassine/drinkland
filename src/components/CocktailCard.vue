@@ -1,5 +1,6 @@
 <script>
 import StyledButton from "./StyledButton.vue";
+import Modal from "./Modal.vue";
 export default {
   name: "CocktailCard",
   props: {
@@ -10,18 +11,26 @@ export default {
   },
   components: {
     StyledButton,
+    Modal,
   },
   data() {
     return {
       showFullDescription: false,
+      showModal: false,
     };
   },
   methods: {
-    showDescription(description, fullDescription = false, wordCount = 10) {
+    showDescription(description, fullDescription = false, wordCount = 15) {
       if (fullDescription) return description;
       const descriptionSplitted = description.split(" ");
       if (descriptionSplitted.length <= wordCount) return description;
       return descriptionSplitted.splice(0, wordCount).join(" ") + "...";
+    },
+    openModal() {
+      this.showModal = true;
+    },
+    closeModal() {
+      this.showModal = false;
     },
   },
 };
@@ -29,6 +38,7 @@ export default {
 
 <template>
   <div class="cocktail-card">
+    <Modal v-if="showModal" @close="closeModal" :cocktail="cocktail" />
     <div class="logo">
       <img src="../assets/Logo.png" alt="logo" />
     </div>
@@ -37,7 +47,9 @@ export default {
     <p @click="showFullDescription = !showFullDescription">
       {{ showDescription(cocktail.instructions, showFullDescription) }}
     </p>
-    <StyledButton class="button">Make It Yourself</StyledButton>
+    <StyledButton class="button" @click="openModal"
+      >Make It Yourself</StyledButton
+    >
     <div class="thumbnail-container">
       <img
         :src="cocktail.imageUrl"
@@ -76,6 +88,7 @@ export default {
   );
   padding: 10px;
   border-radius: 100%;
+  transition: all 0.4s ease-in-out;
 }
 
 .cocktail-card h3 {
@@ -87,6 +100,7 @@ export default {
   text-shadow: 0 0 10px #790c09, 0 0 10px #790c09, 0 0 10px #790c09,
     0 0 10px #790c09, 0 0 10px #790c09, 0 0 10px #790c09, 0 0 10px #790c09,
     0 0 10px #790c09;
+  transition: all 0.5s ease-in-out;
 }
 
 .cocktail-card .category {
@@ -97,9 +111,14 @@ export default {
   width: fit-content;
   border-radius: 12px;
   padding: 8px 12px;
-  margin: 6px 0;
+  margin: 10px 0;
   margin-left: auto;
   margin-right: auto;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.2);
+}
+.cocktail-card:hover .category {
+  box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5);
 }
 
 .cocktail-card p {
@@ -108,15 +127,16 @@ export default {
   font-weight: 300;
   font-size: 0.85em;
   cursor: pointer;
+  white-space: pre-wrap;
 }
 
 .cocktail-card .button {
+  margin-top: auto;
   margin-bottom: 24px;
 }
 
 .thumbnail-container {
   overflow: hidden;
-  margin-top: auto;
   border-radius: 8px;
 }
 .thumbnail-img {
@@ -127,5 +147,20 @@ export default {
 
 .cocktail-card:hover .thumbnail-img {
   transform: scale(1.1);
+}
+
+@media (min-width: 1080px) {
+  .cocktail-card:hover h3 {
+    color: #eebbb7;
+    text-shadow: 0 0 20px #8d151f, 0 0 20px #8d151f, 0 0 20px #8d151f,
+      0 0 20px #8d151f, 0 0 20px #8d151f, 0 0 20px #8d151f, 0 0 20px #8d151f,
+      0 0 20px #8d151f;
+  }
+}
+
+@media (max-width: 840px) {
+  .cocktail-card {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 }
 </style>
