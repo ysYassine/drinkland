@@ -9,7 +9,6 @@ export default {
   },
   methods: {
     closeModal() {
-      this.showModal = false;
       this.$emit("close");
     },
   },
@@ -24,9 +23,7 @@ export default {
           <h3>{{ cocktail.name.toUpperCase() }}</h3>
           <div class="category">{{ cocktail.category }}</div>
         </div>
-        <button type="button" class="close-button" @click="closeModal">
-          &times;
-        </button>
+        <button class="close-button" @click="closeModal">&times;</button>
       </div>
       <div class="modal-header-divider"></div>
       <div class="modal-body">

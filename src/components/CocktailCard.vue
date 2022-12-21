@@ -26,10 +26,10 @@ export default {
       if (descriptionSplitted.length <= wordCount) return description;
       return descriptionSplitted.splice(0, wordCount).join(" ") + "...";
     },
-    openModal() {
+    handleOpenModal() {
       this.showModal = true;
     },
-    closeModal() {
+    handleCloseModal() {
       this.showModal = false;
     },
   },
@@ -38,7 +38,7 @@ export default {
 
 <template>
   <transition name="fade">
-    <Modal v-if="showModal" @close="closeModal" :cocktail="cocktail" />
+    <Modal v-if="showModal" @close="handleCloseModal" :cocktail="cocktail" />
   </transition>
   <div class="cocktail-card">
     <div class="logo">
@@ -49,7 +49,7 @@ export default {
     <p @click="showFullDescription = !showFullDescription">
       {{ showDescription(cocktail.instructions, showFullDescription) }}
     </p>
-    <StyledButton class="button" @click="openModal"
+    <StyledButton class="button" @click="handleOpenModal"
       >Make It Yourself</StyledButton
     >
     <div class="thumbnail-container">
