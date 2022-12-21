@@ -6,16 +6,34 @@ export default {
 
 <template>
   <a>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <slot></slot>
+    <div>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <slot></slot>
+    </div>
   </a>
 </template>
 
 <style scoped>
 a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  outline: 2px solid #eaafd4;
+  transition: outline 0.4s ease-in-out;
+  outline-offset: -2px;
+  background-color: transparent;
+}
+
+a:hover {
+  outline-color: transparent;
+}
+
+div {
   font-family: "Unbounded", cursive;
   position: relative;
   display: inline-block;
@@ -27,21 +45,17 @@ a {
   font-size: 0.8em;
   font-weight: 400;
   overflow: hidden;
-  transition: 0.2s;
   width: fit-content;
   text-align: center;
   z-index: 30;
-  border: 2px solid transparent;
-  animation: border-color-animation 2s linear infinite;
   transition: all 0.4s ease-in-out;
 }
 
-a:hover {
+div:hover {
   color: #601733;
   background: #eebbb7;
   box-shadow: 0 0 5px #eebbb7, 0 0 10px #eebbb7, 0 0 20px #eebbb7;
   transition-delay: 1s;
-  animation: none;
 }
 
 a span {
