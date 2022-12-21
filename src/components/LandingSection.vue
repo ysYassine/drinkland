@@ -158,6 +158,14 @@ export default {
     padding-bottom: 50px;
   }
 
+  .ticket-container h1 {
+    letter-spacing: 5px;
+    font-size: 5em;
+    font-family: "Wire One", sans-serif;
+    color: #721a3c;
+    text-shadow: 0 0 7px #fff, 0 0 4px #fff, 0 0 4px #f1024d, 0 0 10px #f1024d;
+  }
+
   .description {
     background-color: rgba(254, 216, 249, 0.2);
     padding: 16px;

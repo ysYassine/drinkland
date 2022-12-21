@@ -71,6 +71,7 @@ export default {
 .fade-leave-to {
   opacity: 0;
 }
+
 .cocktail-card {
   position: relative;
   border: 0.1em solid #fff;
@@ -160,6 +161,9 @@ export default {
 }
 
 @media (min-width: 1080px) {
+  .cocktail-card:hover {
+    transform: scale(1.02);
+  }
   .cocktail-card:hover h3 {
     color: #eebbb7;
     text-shadow: 0 0 20px #8d151f, 0 0 20px #8d151f, 0 0 20px #8d151f,

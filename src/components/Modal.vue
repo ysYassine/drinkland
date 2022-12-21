@@ -225,15 +225,4 @@ li {
     max-width: 100%;
   }
 }
-
-/* @media (max-width: 450px) {
-  .modal-header {
-    align-items: flex-start;
-  }
-
-  .title-container {
-    flex-direction: column;
-    gap: 16px;
-  }
-} */
 </style>
