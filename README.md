@@ -1,16 +1,34 @@
 # [DRINKLAND](https://ysyassine.github.io/vade-test/)
 
+## THE SMALLEST YET THE BEST COCKTAIL HUB!
+
+Welcome to this app, which was created as part of a technical test that I had to pass using vue.js. It is a demonstration of my skills and abilities as a developer.
+
 ## Live demo
 
 You can try the website at: https://ysyassine.github.io/vade-test/
 
 <img src="./readme_assets/ss.png" alt="screenshot" />
 
-## THE SMALLEST YET THE BEST COCKTAIL HUB!
+## Running the Project
 
-This is an attempt to pass the vue.js test I received from Vade.
-You can find details on 3 random cocktails every time you load the page.
-The best application to do so which you can find for free on the web !
+This project was created using `Vite`. In order to run the project, you will need to have Vite installed on your system.
+
+### Installing Vite
+
+To install Vite, open a terminal and run the following command:
+
+```bash
+npm install -g vite
+```
+
+### Running the app
+
+Once Vite is installed, navigate to the root directory of the project and run the following command:
+
+```bash
+npm run dev
+```
 
 ## Website overview
 
