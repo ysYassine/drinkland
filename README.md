@@ -14,6 +14,14 @@ The best application to do so which you can find for free on the web !
 
 ## Website overview
 
-<img src="./readme_assets/overview.png" alt="website overview" />
+### Landing Page
 
-<img src="./readme_assets/ModalOverview.png" alt="popup overview" />
+<img src="./readme_assets/LandingOverview.png" alt="Landing Page" />
+
+### Cocktails List
+
+<img src="./readme_assets/CocktailsList.png" alt="Cocktails List" />
+
+### Make Cocktail Popup
+
+<img src="./readme_assets/ModalOverview.png" alt="Make Cocktail Popup" />
