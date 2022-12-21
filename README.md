@@ -1,7 +1,12 @@
-# Vue 3 + Vite
+# [DRINKLAND](https://ysyassine.github.io/vade-test/)
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<img src="./readme_assets/ss.png" alt="screenshot" />
+## THE SMALLEST YET THE BEST COCKTAIL HUB!
 
-## Recommended IDE Setup
+This is an attempt to pass the vue.js test I received from Vade.
+You can find details on 3 random cocktails every time you load the page.
+The best application to do so which you can find for free on the web !
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+## Live demo
+
+You can try the website at: https://ysyassine.github.io/vade-test/
