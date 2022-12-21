@@ -14,4 +14,6 @@ The best application to do so which you can find for free on the web !
 
 ## Website overview
 
-<img src="./readme_assets/overview.png" alt="screenshot" />
+<img src="./readme_assets/overview.png" alt="website overview" />
+
+<img src="./readme_assets/ModalOverview.png" alt="popup overview" />
