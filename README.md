@@ -1,4 +1,4 @@
-# [DRINKLAND](https://ysyassine.github.io/vade-test/)
+# [DRINKLAND](https://ysyassine.github.io/drinkland/)
 
 ## THE SMALLEST YET THE BEST COCKTAIL HUB!
 
@@ -8,7 +8,7 @@ Welcome to this app, which was created as part of a technical test that I had to
 
 You can try the website at: https://ysyassine.github.io/drinkland/
 
-<img src="./readme_assets/ss.png" alt="screenshot" />
+<img src="./readme_assets/overview.png" alt="screenshot" />
 
 ## Running the Project
 
