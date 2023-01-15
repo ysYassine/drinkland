@@ -42,7 +42,7 @@ div {
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 0.8em;
+  font-size: 0.9rem;
   font-weight: 400;
   overflow: hidden;
   width: fit-content;

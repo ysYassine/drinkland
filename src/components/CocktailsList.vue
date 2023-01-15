@@ -45,28 +45,24 @@ export default {
         console.error(error);
       }
     },
-    async refreshListWithRandomCocktails(number, maxRequests = 25) {
+    async refreshListWithRandomCocktails(cocktailsCount, maxRequests = 25) {
       let attempsThreshHold = 0;
       this.cocktails.splice(0);
 
       while (
-        this.cocktails.length < number &&
+        this.cocktails.length < cocktailsCount &&
         attempsThreshHold < maxRequests
       ) {
         attempsThreshHold++;
         const res = await this.getRandomCocktail();
-        if (this.cocktails.some((cocktail) => res.id === cocktail.id)) {
-          continue;
+        if (!this.cocktails.some((cocktail) => res.id === cocktail.id)) {
+          this.cocktails.push(res);
         }
-        this.cocktails.push(res);
       }
+      // Just for better UI reasons:
       this.cocktails.sort(
         (a, b) => b.instructions.length - a.instructions.length
       );
-      // Just for better UI reasons:
-      this.cocktails.sort(function (a, b) {
-        return b.instructions.length - a.instructions.length;
-      });
     },
   },
 
