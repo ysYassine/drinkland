@@ -6,7 +6,7 @@ Welcome to this app, which was created as part of a technical test that I had to
 
 ## Live demo
 
-You can try the website at: https://ysyassine.github.io/vade-test/
+You can try the website at: https://ysyassine.github.io/drinkland/
 
 <img src="./readme_assets/ss.png" alt="screenshot" />
 
